@@ -19,20 +19,20 @@ pub fn get_solution_part1() -> i32 {
             '^' => {
                 location.y += 1;
                 find_or_add_to_map(&mut visited_map, (location.x, location.y))
-            },
+            }
             'v' => {
                 location.y -= 1;
                 find_or_add_to_map(&mut visited_map, (location.x, location.y))
-            },
+            }
             '<' => {
                 location.x -= 1;
                 find_or_add_to_map(&mut visited_map, (location.x, location.y))
-            },
+            }
             '>' => {
                 location.x += 1;
                 find_or_add_to_map(&mut visited_map, (location.x, location.y))
-            },
-            _ => {},
+            }
+            _ => {}
         }
     }
 
@@ -61,7 +61,7 @@ pub fn get_solution_part2() -> i32 {
                     robosanta_location.y += 1;
                     robosanta_visited_map.insert((robosanta_location.x, robosanta_location.y));
                 }
-            },
+            }
             'v' => {
                 if counter % 2 == 0 {
                     santa_location.y -= 1;
@@ -70,7 +70,7 @@ pub fn get_solution_part2() -> i32 {
                     robosanta_location.y -= 1;
                     robosanta_visited_map.insert((robosanta_location.x, robosanta_location.y));
                 }
-            },
+            }
             '<' => {
                 if counter % 2 == 0 {
                     santa_location.x -= 1;
@@ -79,7 +79,7 @@ pub fn get_solution_part2() -> i32 {
                     robosanta_location.x -= 1;
                     robosanta_visited_map.insert((robosanta_location.x, robosanta_location.y));
                 }
-            },
+            }
             '>' => {
                 if counter % 2 == 0 {
                     santa_location.x += 1;
@@ -88,8 +88,8 @@ pub fn get_solution_part2() -> i32 {
                     robosanta_location.x += 1;
                     robosanta_visited_map.insert((robosanta_location.x, robosanta_location.y));
                 }
-            },
-            _ => {},
+            }
+            _ => {}
         }
 
         counter += 1;

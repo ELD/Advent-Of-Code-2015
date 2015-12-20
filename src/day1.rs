@@ -23,7 +23,7 @@ pub fn get_solution_part1() -> i32 {
         match character {
             '(' => floor += 1,
             ')' => floor -= 1,
-            _ => {},
+            _ => {}
         }
     }
 
@@ -40,12 +40,12 @@ pub fn get_solution_part2() -> i32 {
             '(' => {
                 floor += 1;
                 position += 1;
-            },
+            }
             ')' => {
                 floor -= 1;
                 position += 1;
-            },
-            _ => {},
+            }
+            _ => {}
         }
 
         if floor < 0 {
